@@ -12,7 +12,7 @@ export async function sendVerificationEmail(
 
 
     try{
-
+        console.log("Sending verification email to:", email);
         await resend.emails.send({
         from: 'auth@resend.dev',
         to: email,
