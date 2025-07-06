@@ -13,7 +13,6 @@ export const authOptions: NextAuthOptions={
             id:"credentials",
             name:"Credentials",
             credentials:{
-
                 email:{label:"Email",type:"text"},
                 password:{label:"Password", type:"text"}
             },
@@ -47,7 +46,7 @@ export const authOptions: NextAuthOptions={
                     }
                 }
                 catch(err:any){
-                    throw new Error(err)
+                    return null
                 }
 
             }
@@ -77,7 +76,7 @@ export const authOptions: NextAuthOptions={
 
     },
     pages:{
-        signIn:'/sign-in'
+        signIn:'/sign-in',
     },
     session:{
         strategy:"jwt"
