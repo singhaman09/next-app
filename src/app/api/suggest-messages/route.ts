@@ -16,7 +16,10 @@ export async function POST(req: Request) {
         content: prompt,
       },
     ],
-  });
+    
+  }
+);
 
+  console.log('Streaming response started', result.toDataStreamResponse);
   return result.toDataStreamResponse();
 }
